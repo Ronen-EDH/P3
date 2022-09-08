@@ -1,0 +1,23 @@
+$color-Primary: #9356DC;
+$color-Secondary: #FF79DA;
+$color-Tertiary: #99E2D0;
+
+@mixin logo-titles{
+    font-family: 'Shrikhand', cursive;
+    font-size: 2rem;
+} 
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+
+//   * p {
+//     margin: 0;
+//     font-size: 1.13rem;
+//     font-weight: 400;
+//   }
+
+h2 {
+    @include logo-titles;
+}
