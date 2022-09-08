@@ -14,8 +14,45 @@
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/abd382f51b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <h2>ohmyfood</h2>
+    <header>
+      <img src="/images/ohmyfood.png" alt="company-logo" />
+    </header>
+    <div class="wrapper">
+      <section class="intro">
+        <div class="intro__location">
+          <i class="intro__location-icon fa-solid fa-location-dot"></i>
+          <p>Paris, Belleville</p>
+        </div>
+        <h2 class="intro__header">Book the menu you like</h2>
+        <p>Discover top-of-the-art restaurants we picked for you.</p>
+        <button class="intro__button">Explore our restaurants</button>
+      </section>
+      <section class="guide">
+        <h2 class="guide__header">How it works</h2>
+        <ul class="guide__list-wrapper">
+          <li class="guide__item">
+            <span class="guide__item-order">1</span
+            ><i class="guide__item-icon fa-solid fa-mobile-screen-button"></i>
+            <p>Chose a restaurant</p>
+          </li>
+          <li class="guide__item">
+            <span class="guide__item-order">2</span
+            ><i class="guide__item-icon fa-solid fa-list-ul"></i>
+            <p>Create your menu</p>
+          </li>
+          <li class="guide__item guide__item--active">
+            <span class="guide__item-order">3</span
+            ><i class="guide__item-icon fa-solid fa-store"></i>
+            <p>Go enjoy it at the restaurant</p>
+          </li>
+        </ul>
+      </section>
+    </div>
   </body>
 </html>
