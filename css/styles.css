@@ -3,9 +3,14 @@
   font-family: "Roboto", sans-serif;
 }
 
+p, h2 {
+  margin: 1em 0em;
+}
+
 .wrapper {
-  margin-left: 4%;
-  margin-right: 4%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 3rem;
 }
 
 header {
@@ -48,7 +53,7 @@ header > img {
 .intro__button {
   padding: 0.85rem 1.25rem 0.85rem 1.25rem;
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   border-radius: 50px;
   background-image: linear-gradient(#FF79DA, #9356DC);
   color: white;
@@ -66,24 +71,34 @@ header > img {
   display: grid;
   list-style-type: none;
   padding-left: 0;
+  margin: 1em 0em;
+}
+.guide > h2 {
+  margin-bottom: 0.88em;
+}
+.guide__border {
+  position: absolute;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.16);
+  padding: 2.25rem 0rem;
+  z-index: -1;
+  width: calc(100% - 12px);
+  justify-self: end;
 }
 .guide__item {
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: auto 60px 1fr;
   align-items: center;
   justify-content: space-evenly;
-  border-radius: 20px;
-  padding: 0.5rem 1.25rem 0.5rem 0.75rem;
-  margin-bottom: 2rem;
-  background-color: #f6f6f6;
+  padding: 0.5rem 1.25rem 0.5rem 0rem;
+  margin: 0.88em 0em;
   position: relative;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.16);
 }
 .guide__item-order {
   background-color: #9356DC;
   border-radius: 50px;
   padding: 0.31em 0.59em;
-  position: absolute;
   left: -12px;
   color: white;
   font-size: 0.81rem;
@@ -95,4 +110,42 @@ header > img {
 }
 .guide__item > p {
   font-weight: 600;
+}
+.guide__item--active > .guide__border {
+  background-color: #f2eafb;
+}
+.guide__item--active .guide__item-icon {
+  color: #9356DC;
+}
+
+main {
+  background-color: #f6f6f6;
+}
+
+.main__cards-wrapper {
+  display: grid;
+}
+.main__card {
+  display: grid;
+  grid-template-columns: auto 50px;
+  grid-template-rows: 2.5fr 0.5fr 0.5fr;
+  border-radius: 20px;
+  margin-bottom: 5%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.16);
+  position: relative;
+}
+.main__card img {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.main__card p {
+  grid-column: 1/2;
+}
+.main__card-new {
+  position: absolute;
+  background-color: #99E2D0;
 }/*# sourceMappingURL=styles.css.map */
