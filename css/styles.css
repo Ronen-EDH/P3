@@ -37,7 +37,7 @@ header > img {
   grid-template-columns: 1fr 30px auto 1fr;
   align-items: center;
   background-color: #eaeaea;
-  box-shadow: 0 2px 2px -2px inset rgba(0, 0, 0, 0.4), 0 3px 3px inset rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 4px -4px inset rgba(0, 0, 0, 0.2);
 }
 .intro__location-icon {
   grid-column-start: 2;
@@ -69,21 +69,29 @@ header > img {
 }
 .guide__item {
   display: grid;
-  grid-template-columns: auto 30px 1fr;
+  grid-template-columns: 60px 1fr;
   align-items: center;
   justify-content: space-evenly;
   border-radius: 20px;
-  padding: 0.85rem 1.25rem 0.85rem 1.25rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 3px 4px 1px rgba(0, 0, 0, 0.24);
+  padding: 0.5rem 1.25rem 0.5rem 0.75rem;
+  margin-bottom: 2rem;
+  background-color: #f6f6f6;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.16);
 }
 .guide__item-order {
   background-color: #9356DC;
   border-radius: 50px;
+  padding: 0.31em 0.59em;
+  position: absolute;
+  left: -12px;
+  color: white;
+  font-size: 0.81rem;
 }
 .guide__item-icon {
   font-size: 1.25rem;
   color: #7e7e7e;
+  justify-self: center;
 }
 .guide__item > p {
   font-weight: 600;
