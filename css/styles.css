@@ -3,6 +3,20 @@
   font-family: "Roboto", sans-serif;
 }
 
+:visited {
+  color: black;
+}
+
+:link {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
 .wrapper {
   padding-left: 5%;
   padding-right: 5%;
@@ -65,8 +79,6 @@ header > img {
 
 .guide__list-wrapper {
   display: grid;
-  list-style-type: none;
-  padding-left: 0;
   margin: 1em 0em;
 }
 .guide > h2 {
@@ -122,6 +134,10 @@ main {
 .main__cards-wrapper {
   display: grid;
 }
+.main__cards-wrapper a:nth-child(2) img {
+  -o-object-position: 100% 62%;
+     object-position: 100% 62%;
+}
 .main__card {
   display: grid;
   grid-template-columns: auto 50px;
@@ -170,5 +186,33 @@ main {
   grid-column: 2/3;
   grid-row: 2/4;
   align-self: center;
-  font-size: 1.25em;
+  font-size: 1.38em;
+}
+
+footer {
+  background-color: #353535;
+}
+
+.footer__list {
+  display: grid;
+  row-gap: 0.63em;
+  color: white;
+  padding: 1.5em 0em 2em 0.5em;
+}
+.footer__list a {
+  color: white;
+  font-size: 0.88rem;
+  display: grid;
+  grid-template-columns: 1em auto;
+  -moz-column-gap: 0.5em;
+       column-gap: 0.5em;
+  justify-content: start;
+}
+.footer__list a i {
+  font-size: 0.81em;
+  align-self: center;
+}
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  margin-bottom: 0.5em;
 }/*# sourceMappingURL=styles.css.map */
