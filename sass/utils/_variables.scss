@@ -1,0 +1,12 @@
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$color-background-location: #eaeaea;
+$color-background-mild: #f6f6f6;
+$color-txt-alt: white;
+$color-primary--lighter: lighten($color-primary, 3%);
+$color-secondary--lighter: lighten($color-secondary, 3%);
+$color-guide-icon: #7e7e7e;
+$color-guide-item-bg--active: lighten($color-primary, 35%);
+$color-card-new-txt: darken($color-tertiary, 45%);
+$color-footer-bg: #353535;

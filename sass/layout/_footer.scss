@@ -1,0 +1,28 @@
+footer {
+  background-color: $color-footer-bg;
+}
+
+.footer {
+  &__list {
+    display: grid;
+    row-gap: 0.63em;
+    color: $color-txt-alt;
+    padding: 1.5em 0em 2em 0.5em;
+    a {
+      color: $color-txt-alt;
+      font-size: 0.88rem;
+      display: grid;
+      grid-template-columns: 1em auto;
+      column-gap: 0.5em;
+      justify-content: start;
+      i {
+        font-size: 0.81em;
+        align-self: center;
+      }
+    }
+  }
+  &__logo {
+    @include logo-titles();
+    margin-bottom: 0.5em;
+  }
+}
