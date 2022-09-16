@@ -1,31 +1,29 @@
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
 $color-background-location: #eaeaea;
-$color-background-mild:#f6f6f6;
-$color-txt-alt:white;
-$color-primary--lighter: lighten($color-primary,3%);
-$color-secondary--lighter: lighten($color-secondary,3%);
+$color-background-mild: #f6f6f6;
+$color-txt-alt: white;
+$color-primary--lighter: lighten($color-primary, 3%);
+$color-secondary--lighter: lighten($color-secondary, 3%);
 $color-guide-icon: #7e7e7e;
-$color-guide-item-bg--active: lighten($color-primary,35%);
-$color-card-new-txt: darken($color-tertiary,45%);
-$color-footer-bg:#353535;
-
-
+$color-guide-item-bg--active: lighten($color-primary, 35%);
+$color-card-new-txt: darken($color-tertiary, 45%);
+$color-footer-bg: #353535;
 
 @mixin logo-titles {
-  font-family: 'Shrikhand', cursive;
-} 
+  font-family: "Shrikhand", cursive;
+}
 
 * {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 :visited {
   color: black;
 }
-  
+
 :link {
   text-decoration: none;
   color: black;
@@ -36,9 +34,9 @@ ul {
   padding-left: 0;
 }
 
-  // p,h2 {
-  //   margin: 1em 0em;
-  // }
+// p,h2 {
+//   margin: 1em 0em;
+// }
 
 .wrapper {
   padding-left: 5%;
@@ -96,10 +94,13 @@ header {
     transition: all 300ms;
     &:hover {
       cursor: pointer;
-      box-shadow: 0 10px 28px rgb(0 0 0 / 25%), 0 7px 10px rgb(0 0 0 / 22%);;
-      background-image: linear-gradient($color-secondary--lighter,$color-primary--lighter);
-       }
+      box-shadow: 0 10px 28px rgb(0 0 0 / 25%), 0 7px 10px rgb(0 0 0 / 22%);
+      background-image: linear-gradient(
+        $color-secondary--lighter,
+        $color-primary--lighter
+      );
     }
+  }
 }
 
 .guide {
@@ -113,10 +114,10 @@ header {
   &__border {
     position: absolute;
     border-radius: 20px;
-    background-color: $color-background-mild ;
+    background-color: $color-background-mild;
     box-shadow: 0 4px 15px rgb(0 0 0 / 16%);
     padding: 2.25rem 0rem;
-    z-index: -1 ;
+    z-index: -1;
     // border: green solid 2px;
     width: calc(100% - 12px);
     justify-self: end;
@@ -136,7 +137,6 @@ header {
       left: -12px;
       color: white;
       font-size: 0.81rem;
-
     }
     &-icon {
       font-size: 1.25rem;
@@ -156,7 +156,7 @@ header {
     }
   }
 }
-main{
+main {
   background-color: $color-background-mild;
   padding-top: 2em;
 }
@@ -164,7 +164,7 @@ main{
   &__cards-wrapper {
     display: grid;
     & a:nth-child(2) img {
-    object-position: 100% 62%;
+      object-position: 100% 62%;
     }
   }
   &__card {
@@ -187,7 +187,8 @@ main{
       // height: 27vh;
       height: 100%;
     }
-    p,h3 {
+    p,
+    h3 {
       margin: 0;
       margin-left: 1rem;
     }
@@ -200,7 +201,7 @@ main{
       margin-bottom: 0.13em;
       font-size: 1.08rem;
     }
-    &-new { 
+    &-new {
       position: absolute;
       top: 1em;
       right: 1em;
@@ -211,16 +212,33 @@ main{
       font-weight: 500;
       border-radius: 2px;
     }
-    &-icon {
+
+    &-icon,
+    &-icon--full {
       grid-column: 2 / 3;
-      grid-row: 2 / 4 ;
+      grid-row: 2 / 4;
       align-self: center;
       font-size: 1.38em;
+    }
+    &-icon--full.fa-heart {
+      background-image: linear-gradient(white 50%, #9356dc 50%, #ff79da);
+      background-clip: text;
+      color: transparent;
+      height: 3rem;
+      background-position: left 0 top -50px;
+      margin-top: 26px;
+      opacity: 0;
+      transition: 1s ease-in-out;
+    }
+    &:hover .main__card-icon--full {
+      // animation: full-heart 1s ease-in-out both;
+      background-position: left 0px top -75px;
+      opacity: 1;
     }
   }
 }
 footer {
-  background-color:  $color-footer-bg;
+  background-color: $color-footer-bg;
 }
 
 .footer {
@@ -238,7 +256,7 @@ footer {
       justify-content: start;
       i {
         font-size: 0.81em;
-        align-self: center; 
+        align-self: center;
       }
     }
   }
@@ -247,3 +265,14 @@ footer {
     margin-bottom: 0.5em;
   }
 }
+
+// @keyframes full-heart {
+//   0% {
+//     background-position: left 0px top -50px;
+//     opacity: 1;
+//   }
+//   100% {
+//     background-position: left 0px top -75px;
+//     opacity: 1;
+//   }
+// }
