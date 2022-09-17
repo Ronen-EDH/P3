@@ -1,0 +1,23 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "description": "Openclassrooms project 3 by EDH",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css",
+    "sass-menu": "sass --watch ./sass/pages/_the-full-palette.scss:./css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/",
+    "watch": "npm-run-all --parallel sass-watch postcss-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ronen-EDH/P3.git"
+  },
+  "author": "EDH",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/Ronen-EDH/P3/issues"
+  },
+  "homepage": "https://github.com/Ronen-EDH/P3#readme"
+}
