@@ -51,7 +51,7 @@ header > img {
   font-family: "Shrikhand", cursive;
   font-size: 1.63rem;
   letter-spacing: 0.04rem;
-  margin: 1.5em 0em;
+  margin: 1.5em 0em 1.25em 0em;
 }
 .main__menu-icon {
   align-self: center;
@@ -60,10 +60,24 @@ header > img {
 }
 .main__menu-list {
   grid-column: 1/3;
+  display: grid;
+  grid-row-gap: 0.81rem;
+  margin: 0;
 }
 .main__menu-header h4 {
   text-transform: uppercase;
   font-weight: 300;
+  position: relative;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+.main__menu-header h4::after {
+  content: "";
+  border-top: solid #99e2d0 3.5px;
+  position: absolute;
+  width: 2.5em;
+  left: 0;
+  top: 1.44em;
 }
 .main__menu-item {
   border-radius: 0.75em;
@@ -76,6 +90,42 @@ header > img {
 .main__menu-item p {
   margin: 0;
   grid-column: 1/2;
+}
+.main__menu-item h4 {
+  font-size: 1.08rem;
+}
+.main__menu-item p {
+  font-size: 0.88rem;
+  margin-top: 0.38rem;
+}
+.main__menu-item strong {
+  font-size: 0.88rem;
+  justify-self: center;
+}
+.main__menu ul {
+  margin-bottom: 2rem;
+}
+.main__button {
+  padding: 0.85rem 1.25rem 0.85rem 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  border-radius: 50px;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  color: white;
+  border-style: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 3px 4px 1px rgba(0, 0, 0, 0.24);
+  transition: all 300ms;
+}
+.main__button:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25), 0 7px 10px rgba(0, 0, 0, 0.22);
+  background-image: linear-gradient(#ff88de, #9b63df);
+}
+.main__button {
+  grid-column: 1/3;
+  width: 50%;
+  justify-self: center;
+  margin-bottom: 1em;
 }
 
 footer {
