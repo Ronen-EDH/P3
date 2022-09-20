@@ -32,6 +32,15 @@ header > img {
   width: 43%;
 }
 
+.header {
+  position: relative;
+}
+.header__icon {
+  position: absolute;
+  left: 25px;
+  font-size: 1.25rem;
+}
+
 .main {
   display: grid;
 }
@@ -42,6 +51,9 @@ header > img {
 }
 .main img {
   width: 100%;
+  height: 255px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main__menu {
   display: grid;
@@ -64,6 +76,42 @@ header > img {
   grid-row-gap: 0.81rem;
   margin: 0;
 }
+.main__menu-list--1 .main__menu-item--1 {
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+}
+.main__menu-list--1 .main__menu-item--2 {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+.main__menu-list--1 .main__menu-item--3 {
+  -webkit-animation-delay: 450ms;
+          animation-delay: 450ms;
+}
+.main__menu-list--2 .main__menu-item--1 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+.main__menu-list--2 .main__menu-item--2 {
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
+}
+.main__menu-list--2 .main__menu-item--3 {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+.main__menu-list--3 .main__menu-item--1 {
+  -webkit-animation-delay: 1050ms;
+          animation-delay: 1050ms;
+}
+.main__menu-list--3 .main__menu-item--2 {
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+.main__menu-list--3 .main__menu-item--3 {
+  -webkit-animation-delay: 1350ms;
+          animation-delay: 1350ms;
+}
 .main__menu-header h4 {
   text-transform: uppercase;
   font-weight: 300;
@@ -85,6 +133,8 @@ header > img {
   padding: 0.75em 0em 0.75em 0.75em;
   display: grid;
   grid-template-columns: auto 50px;
+  -webkit-animation: slide-and-show 1000ms ease-out backwards;
+          animation: slide-and-show 1000ms ease-out backwards;
 }
 .main__menu-item h4,
 .main__menu-item p {
@@ -97,10 +147,14 @@ header > img {
 .main__menu-item p {
   font-size: 0.88rem;
   margin-top: 0.38rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main__menu-item strong {
   font-size: 0.88rem;
   justify-self: center;
+  align-self: end;
 }
 .main__menu ul {
   margin-bottom: 2rem;
@@ -128,6 +182,19 @@ header > img {
   margin-bottom: 1em;
 }
 
+@-webkit-keyframes slide-and-show {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes slide-and-show {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
 footer {
   background-color: #353535;
 }
@@ -154,4 +221,4 @@ footer {
 .footer__logo {
   font-family: "Shrikhand", cursive;
   margin-bottom: 0.5em;
-}/*# sourceMappingURL=the-full-palette.css.map */
+}/*# sourceMappingURL=menu_the_enchanted_plate.css.map */

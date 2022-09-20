@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:visited {
+  color: black;
+}
+
+:link {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.wrapper {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 3rem;
+}
+
+header {
+  display: grid;
+  justify-items: center;
+  padding: 1.5rem 0 1rem 0;
+}
+header > img {
+  width: 43%;
+}
+
+.header {
+  position: relative;
+}
+.header__icon {
+  position: absolute;
+  left: 25px;
+  font-size: 1.25rem;
+}
+
+.main {
+  display: grid;
+}
+.main__menu {
+  border-radius: 40px;
+  margin-top: -3rem;
+  background-color: #f6f6f6;
+}
+.main img {
+  width: 100%;
+}
+.main__menu {
+  display: grid;
+  grid-template-columns: auto 50px;
+}
+.main__menu > h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.63rem;
+  letter-spacing: 0.04rem;
+  margin: 1.5em 0em 1.25em 0em;
+}
+.main__menu-icon {
+  align-self: center;
+  justify-self: center;
+  font-size: 1.38em;
+}
+.main__menu-list {
+  grid-column: 1/3;
+  display: grid;
+  grid-row-gap: 0.81rem;
+  margin: 0;
+}
+.main__menu-list--1 .main__menu-item--1 {
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+}
+.main__menu-list--1 .main__menu-item--2 {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+.main__menu-list--1 .main__menu-item--3 {
+  -webkit-animation-delay: 450ms;
+          animation-delay: 450ms;
+}
+.main__menu-list--2 .main__menu-item--1 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+.main__menu-list--2 .main__menu-item--2 {
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
+}
+.main__menu-list--2 .main__menu-item--3 {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+.main__menu-list--3 .main__menu-item--1 {
+  -webkit-animation-delay: 1050ms;
+          animation-delay: 1050ms;
+}
+.main__menu-list--3 .main__menu-item--2 {
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+.main__menu-list--3 .main__menu-item--3 {
+  -webkit-animation-delay: 1350ms;
+          animation-delay: 1350ms;
+}
+.main__menu-header h4 {
+  text-transform: uppercase;
+  font-weight: 300;
+  position: relative;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+.main__menu-header h4::after {
+  content: "";
+  border-top: solid #99e2d0 3.5px;
+  position: absolute;
+  width: 2.5em;
+  left: 0;
+  top: 1.44em;
+}
+.main__menu-item {
+  border-radius: 0.75em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.16);
+  padding: 0.75em 0em 0.75em 0.75em;
+  display: grid;
+  grid-template-columns: auto 50px;
+  -webkit-animation: slide-and-show 1000ms ease-out backwards;
+          animation: slide-and-show 1000ms ease-out backwards;
+}
+.main__menu-item h4,
+.main__menu-item p {
+  margin: 0;
+  grid-column: 1/2;
+}
+.main__menu-item h4 {
+  font-size: 1.08rem;
+}
+.main__menu-item p {
+  font-size: 0.88rem;
+  margin-top: 0.38rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main__menu-item strong {
+  font-size: 0.88rem;
+  justify-self: center;
+  align-self: end;
+}
+.main__menu ul {
+  margin-bottom: 2rem;
+}
+.main__button {
+  padding: 0.85rem 1.25rem 0.85rem 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  border-radius: 50px;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  color: white;
+  border-style: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 3px 4px 1px rgba(0, 0, 0, 0.24);
+  transition: all 300ms;
+}
+.main__button:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25), 0 7px 10px rgba(0, 0, 0, 0.22);
+  background-image: linear-gradient(#ff88de, #9b63df);
+}
+.main__button {
+  grid-column: 1/3;
+  width: 50%;
+  justify-self: center;
+  margin-bottom: 1em;
+}
+
+@-webkit-keyframes slide-and-show {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes slide-and-show {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+footer {
+  background-color: #353535;
+}
+
+.footer__list {
+  display: grid;
+  row-gap: 0.63em;
+  color: white;
+  padding: 1.5em 0em 2em 0.5em;
+}
+.footer__list a {
+  color: white;
+  font-size: 0.88rem;
+  display: grid;
+  grid-template-columns: 1em auto;
+  -moz-column-gap: 0.5em;
+       column-gap: 0.5em;
+  justify-content: start;
+}
+.footer__list a i {
+  font-size: 0.81em;
+  align-self: center;
+}
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  margin-bottom: 0.5em;
+}/*# sourceMappingURL=menu.css.map */
