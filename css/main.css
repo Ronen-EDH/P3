@@ -17,6 +17,26 @@ ul {
   padding-left: 0;
 }
 
+.loading-blank {
+  -webkit-animation: blank 3s backwards;
+          animation: blank 3s backwards;
+}
+.loading-animation {
+  -webkit-animation: loader 1s linear backwards 3;
+          animation: loader 1s linear backwards 3;
+  border: 16px solid #eaeaea;
+  border-radius: 50%;
+  border-top: 16px solid #9356dc;
+  width: 120px;
+  height: 120px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  margin-top: -60px;
+  margin-left: -60px;
+}
+
 .wrapper {
   padding-left: 5%;
   padding-right: 5%;
@@ -231,4 +251,42 @@ footer {
 .footer__logo {
   font-family: "Shrikhand", cursive;
   margin-bottom: 0.5em;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blank {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blank {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
