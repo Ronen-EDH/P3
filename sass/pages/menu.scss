@@ -82,12 +82,12 @@
     &-item {
       padding: 0.75em 0em 0.75em 0.75em;
       cursor: pointer;
-      animation: slide-and-show $menu__item-dur ease-out backwards;
       position: relative;
+      animation: slide-and-show $menu__item-dur ease-out backwards;
       // overflow: hidden;
       border-radius: 0.75em;
       @for $n from 1 through $menu__num-items {
-        &--#{$n} + .main__menu-border--#{$n} {
+        &--#{$n} {
           animation-delay: $menu__item-delay * $n;
         }
       }
@@ -98,9 +98,11 @@
         width: calc(100% - 4.19em);
       }
       &:hover .main__menu-animation-checkmark {
-        transform: translateX(-4.19rem);
+        // transform: translateX(-4.19rem);
         // transition: transform 2s ease-in-out;
-        // animation: rota 2s ease-in-out backwards;
+        // rotate: 180deg;
+        animation: rota-in 2s ease-in-out forwards;
+        // animation: rota-in 2s ease-in-out forwards, vis infinite;
       }
       &-border {
         border-radius: 0.75em;
@@ -184,6 +186,13 @@
         align-self: end;
       }
     }
+
+    // @for $n from 1 through $menu__num-items {
+    //   &-item--#{$n} {
+    //     animation-delay: $menu__item-delay * $n;
+    //   }
+    // }
+
     &-animation-checkmark {
       position: absolute;
       top: calc(50% - 0.75rem);
@@ -191,8 +200,13 @@
       z-index: 1;
       /* color: white; */
       font-size: 1.5rem;
-      transform: rotate(-180deg);
-      transition: transform 2s ease-in-out;
+      // rotate: 180deg;
+      // transform: rotate(-180deg);
+      // transition: transform 2s ease-in-out;
+      // transform: translateX(0);
+      animation: out 2s ease-in-out;
+      // animation-play-state: paused;
+      // visibility: hidden;
     }
 
     ul {
@@ -218,12 +232,43 @@
   // }
 }
 
-@keyframes rota {
+@keyframes rota-in {
   0% {
+    // transform-origin: right;
+    // transform: translateX(50px), rotate(-270deg);
     transform: rotate(-180deg);
+    // transform: rotate(-270deg);
+    // transform-origin: (-1.19rem);
+  }
+
+  100% {
+    transform: translateX(-4.19rem) rotate(0deg);
+    //   transform: rotate(0deg);
+    //   transform-origin: (-1.19rem);
+  }
+}
+
+// @keyframes in {
+//   100% {
+//     transform: translateX(1.19rem);
+//   }
+// }
+
+@keyframes out {
+  0% {
+    transform: translateX(-4.19rem);
   }
   100% {
-    transform: rotate(0deg);
+    transform: translateX(0);
+  }
+}
+
+@keyframes vis {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
   }
 }
 
