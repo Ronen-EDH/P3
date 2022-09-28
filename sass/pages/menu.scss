@@ -80,6 +80,7 @@
       }
     }
     &-item {
+      display: grid;
       padding: 0.75em 0em 0.75em 0.75em;
       cursor: pointer;
       position: relative;
@@ -96,36 +97,42 @@
       }
       &:hover &-container {
         width: calc(100% - 4.19em);
+        // h4 {
+        //   white-space: nowrap;
+        //   overflow: hidden;
+        //   text-overflow: ellipsis;
+        // }
       }
       &:hover .main__menu-animation-checkmark {
         // transform: translateX(-4.19rem);
         // transition: transform 2s ease-in-out;
         // rotate: 180deg;
-        animation: rota-in 2s ease-in-out forwards;
+        animation: rota-in 1s ease-in-out forwards;
         // animation: rota-in 2s ease-in-out forwards, vis infinite;
       }
       &-border {
         border-radius: 0.75em;
         box-shadow: 0 4px 15px rgb(0 0 0 / 16%);
         /* border: aqua solid 2px; */
-        height: 4.19em;
+        height: fill-available;
         width: 100%;
         position: absolute;
         top: 0;
         left: 0;
         overflow: hidden;
         animation: slide-and-show $menu__item-dur ease-out backwards;
+        background-color: white;
         &::after {
           content: "";
           width: 4.19em;
-          height: 4.19em;
+          height: fill-available;
           background-color: $color-tertiary;
           position: absolute;
           right: -4.19em;
           top: 0;
           border-radius: 0em 0.75em 0.75em 0em;
           transform-origin: right;
-          transition: transform 2s ease-in-out;
+          transition: transform 1s ease-in-out;
         }
         // &:hover::after {
         //   transform: translateX(-67px);
@@ -138,7 +145,8 @@
         display: grid;
         grid-template-columns: auto 50px;
         width: 100%;
-        transition: width 2s ease-in-out;
+        transition: width 1s ease-in-out;
+        z-index: 1;
       }
       // li:not(:first-child) {
       //   li::before {
@@ -198,13 +206,14 @@
       top: calc(50% - 0.75rem);
       right: calc(-2.095rem - 0.75rem);
       z-index: 1;
-      /* color: white; */
+      color: $color-txt-alt;
       font-size: 1.5rem;
+      animation: out 1s ease-in-out;
       // rotate: 180deg;
       // transform: rotate(-180deg);
       // transition: transform 2s ease-in-out;
       // transform: translateX(0);
-      animation: out 2s ease-in-out;
+
       // animation-play-state: paused;
       // visibility: hidden;
     }
@@ -273,3 +282,6 @@
 }
 
 @import "../layout/footer";
+
+@media (min-width: 768px) {
+}
