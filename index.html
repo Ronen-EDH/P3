@@ -20,104 +20,109 @@
     ></script>
   </head>
   <body>
-    <header>
-      <img src="/images/ohmyfood.png" alt="company-logo" />
-    </header>
-    <section class="intro">
-      <div class="intro__location">
-        <i class="intro__location-icon fa-solid fa-location-dot"></i>
-        <p>Paris, Belleville</p>
-      </div>
-      <h2 class="intro__header">Book the menu you like</h2>
-      <p>Discover top-of-the-art restaurants we picked for you.</p>
-      <a href="#restaurants" class="intro__button"> Explore our restaurants </a>
-    </section>
-    <section class="guide wrapper">
-      <h2 class="guide__header">How it works</h2>
-      <ul class="guide__list-wrapper">
-        <li class="guide__item">
-          <div class="guide__border"></div>
-          <span class="guide__item-order">1</span
-          ><i class="guide__item-icon fa-solid fa-mobile-screen-button"></i>
-          <p>Chose a restaurant</p>
-        </li>
-        <li class="guide__item">
-          <div class="guide__border"></div>
-          <span class="guide__item-order">2</span
-          ><i class="guide__item-icon fa-solid fa-list-ul"></i>
-          <p>Create your menu</p>
-        </li>
-        <li class="guide__item guide__item--active">
-          <div class="guide__border"></div>
-          <span class="guide__item-order">3</span
-          ><i class="guide__item-icon fa-solid fa-store"></i>
-          <p>Go enjoy it at the restaurant</p>
-        </li>
-      </ul>
-    </section>
-    <main class="wrapper">
-      <h2 id="restaurants" class="main__header">Restaurants</h2>
-      <div class="main__cards-wrapper">
-        <a class="main__card" href="/html/menu_the-full-palette.html">
-          <img
-            src="/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-            alt="A dish from The Full Palette restaurant"
-          />
-          <h3>The Full Palette</h3>
-          <p>New York</p>
-          <i class="main__card-icon fa-regular fa-heart"></i>
-          <i class="main__card-icon--full fa-solid fa-heart"></i>
-          <div class="main__card-new">New</div>
+    <div class="loading-animation"></div>
+    <div class="loading-blank">
+      <header>
+        <img src="/images/ohmyfood.png" alt="company-logo" />
+      </header>
+      <section class="intro">
+        <div class="intro__location">
+          <i class="intro__location-icon fa-solid fa-location-dot"></i>
+          <p>Paris, Belleville</p>
+        </div>
+        <h2 class="intro__header">Book the menu you like</h2>
+        <p>Discover top-of-the-art restaurants we picked for you.</p>
+        <a href="#restaurants" class="intro__button">
+          Explore our restaurants
         </a>
-        <a class="main__card" href="/html/menu_the_enchanted-plate.html">
-          <img
-            src="/images/stil-u2Lp8tXIcjw-unsplash.jpg"
-            alt="A dish from The Enchanted Plate restaurant"
-          />
-          <h3>The Enchanted Plate</h3>
-          <p>New York</p>
-          <i class="main__card-icon fa-regular fa-heart"></i>
-          <i class="main__card-icon--full fa-solid fa-heart"></i>
-          <div class="main__card-new">New</div>
-        </a>
-        <a class="main__card" href="/html/menu_bastille.html">
-          <img
-            src="/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-            alt="A dish from Bastille restaurant"
-          />
-          <h3>Bastille</h3>
-          <p>New York</p>
-          <i class="main__card-icon fa-regular fa-heart"></i>
-          <i class="main__card-icon--full fa-solid fa-heart"></i>
-        </a>
-        <a class="main__card" href="/html/menu_le-gourmand.html">
-          <img
-            src="/images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-            alt="A dish from Le Gourmand restaurant"
-          />
-          <h3>Le Gourmand</h3>
-          <p>New York</p>
-          <i class="main__card-icon fa-regular fa-heart"></i>
-          <i class="main__card-icon--full fa-solid fa-heart"></i>
-        </a>
-      </div>
-    </main>
-    <footer class="footer wrapper">
-      <ul class="footer__list">
-        <li class="footer__logo">ohmyfood</li>
-        <li>
-          <a href="#"
-            ><i class="fa-solid fa-utensils"></i>Suggest a restaurant
+      </section>
+      <section class="guide wrapper">
+        <h2 class="guide__header">How it works</h2>
+        <ul class="guide__list-wrapper">
+          <li class="guide__item">
+            <div class="guide__border"></div>
+            <span class="guide__item-order">1</span
+            ><i class="guide__item-icon fa-solid fa-mobile-screen-button"></i>
+            <p>Chose a restaurant</p>
+          </li>
+          <li class="guide__item">
+            <div class="guide__border"></div>
+            <span class="guide__item-order">2</span
+            ><i class="guide__item-icon fa-solid fa-list-ul"></i>
+            <p>Create your menu</p>
+          </li>
+          <li class="guide__item guide__item--active">
+            <div class="guide__border"></div>
+            <span class="guide__item-order">3</span
+            ><i class="guide__item-icon fa-solid fa-store"></i>
+            <p>Go enjoy it at the restaurant</p>
+          </li>
+        </ul>
+      </section>
+      <main class="wrapper">
+        <h2 id="restaurants" class="main__header">Restaurants</h2>
+        <div class="main__cards-wrapper">
+          <a class="main__card" href="/html/menu_the-full-palette.html">
+            <img
+              src="/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              alt="A dish from The Full Palette restaurant"
+            />
+            <h3>The Full Palette</h3>
+            <p>New York</p>
+            <i class="main__card-icon fa-regular fa-heart"></i>
+            <i class="main__card-icon--full fa-solid fa-heart"></i>
+            <div class="main__card-new">New</div>
           </a>
-        </li>
-        <li>
-          <a href="#"
-            ><i class="fa-solid fa-handshake-angle"></i>Become a partner
+          <a class="main__card" href="/html/menu_the_enchanted-plate.html">
+            <img
+              src="/images/stil-u2Lp8tXIcjw-unsplash.jpg"
+              alt="A dish from The Enchanted Plate restaurant"
+            />
+            <h3>The Enchanted Plate</h3>
+            <p>New York</p>
+            <i class="main__card-icon fa-regular fa-heart"></i>
+            <i class="main__card-icon--full fa-solid fa-heart"></i>
+            <div class="main__card-new">New</div>
           </a>
-        </li>
-        <li><a href="#">Legal</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </footer>
+          <a class="main__card" href="/html/menu_bastille.html">
+            <img
+              src="/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+              alt="A dish from Bastille restaurant"
+            />
+            <h3>Bastille</h3>
+            <p>New York</p>
+            <i class="main__card-icon fa-regular fa-heart"></i>
+            <i class="main__card-icon--full fa-solid fa-heart"></i>
+          </a>
+          <a class="main__card" href="/html/menu_le-gourmand.html">
+            <img
+              src="/images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+              alt="A dish from Le Gourmand restaurant"
+            />
+            <h3>Le Gourmand</h3>
+            <p>New York</p>
+            <i class="main__card-icon fa-regular fa-heart"></i>
+            <i class="main__card-icon--full fa-solid fa-heart"></i>
+          </a>
+        </div>
+      </main>
+      <footer class="footer wrapper">
+        <ul class="footer__list">
+          <li class="footer__logo">ohmyfood</li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-utensils"></i>Suggest a restaurant
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-handshake-angle"></i>Become a partner
+            </a>
+          </li>
+          <li><a href="#">Legal</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </footer>
+    </div>
   </body>
 </html>
