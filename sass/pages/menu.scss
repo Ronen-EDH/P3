@@ -15,8 +15,10 @@
   position: relative;
   &__icon {
     position: absolute;
-    left: 25px;
-    font-size: 1.25rem;
+    left: 7%;
+    // font-size: 1.25rem;
+    font-size: clamp(125%, 5vw, 200%);
+    align-self: center;
   }
 }
 
@@ -284,4 +286,35 @@
 @import "../layout/footer";
 
 @media (min-width: 768px) {
+  .header {
+    &__icon {
+      left: 10%;
+    }
+  }
+  .main {
+    &__wrapper {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    img {
+      border-radius: 40px;
+    }
+  }
+}
+@media (min-width: 998px) {
+  .header {
+    &__icon {
+      left: 15%;
+    }
+  }
+  .main {
+    &__wrapper {
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+    &__menu {
+      width: 120%;
+      justify-self: center;
+    }
+  }
 }

@@ -38,8 +38,9 @@ header > img {
 }
 .header__icon {
   position: absolute;
-  left: 25px;
-  font-size: 1.25rem;
+  left: 7%;
+  font-size: clamp(125%, 5vw, 200%);
+  align-self: center;
 }
 
 .main {
@@ -350,4 +351,36 @@ footer {
 .footer__logo {
   font-family: "Shrikhand", cursive;
   margin-bottom: 0.5em;
+}
+
+@media (min-width: 481px) {
+  .main img {
+    height: 55vw;
+  }
+}
+@media (min-width: 768px) {
+  .header__icon {
+    left: 10%;
+  }
+  .main__wrapper {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .main img {
+    border-radius: 40px;
+    height: 45vw;
+  }
+}
+@media (min-width: 998px) {
+  .header__icon {
+    left: 15%;
+  }
+  .main__wrapper {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .main__menu {
+    width: 120%;
+    justify-self: center;
+  }
 }/*# sourceMappingURL=menu_the_enchanted_plate.css.map */
