@@ -47,6 +47,7 @@
     text-align: center;
   }
   &__location {
+    padding: 0.81em;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 30px auto 1fr;
@@ -61,7 +62,18 @@
       font-weight: 500;
     }
   }
+  &__search-field {
+    border-style: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: 500;
+    width: 115px;
+  }
   @import "./components/buttons";
+}
+
+::placeholder {
+  color: $color-footer-bg;
 }
 
 .guide {

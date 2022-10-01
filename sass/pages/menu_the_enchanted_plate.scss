@@ -61,10 +61,10 @@ $menu__num-items: 10;
       //     $menu__loop-counter: $menu__loop-counter + ($i - 1) * 3;
       //     @for $n from 1 through $menu__num-items {
       //       .main__menu-item--#{$n} {
-      //         animation-delay: $menu__item-delay * ($n + $menu__loop-counter);
-      //         // animation-delay: $menu__total-delay + ($menu__item-delay * $n);
+      //         animation-delay: $menu__item-slide-and-show-delay * ($n + $menu__loop-counter);
+      //         // animation-delay: $menu__total-delay + ($menu__item-slide-and-show-delay * $n);
       //       }
-      //       // $menu__total-delay: $menu__total-delay + ($menu__item-delay * $n);
+      //       // $menu__total-delay: $menu__total-delay + ($menu__item-slide-and-show-delay * $n);
       //     }
       //   }
       // }
@@ -89,12 +89,13 @@ $menu__num-items: 10;
       padding: 0.75em 0em 0.75em 0.75em;
       cursor: pointer;
       position: relative;
-      animation: slide-and-show $menu__item-dur ease-out backwards;
+      animation: slide-and-show $menu__item-slide-and-show-duration
+        $menu__item-slide-and-show-timing backwards;
       // overflow: hidden;
       border-radius: 0.75em;
       @for $n from 1 through $menu__num-items {
         &--#{$n} {
-          animation-delay: $menu__item-delay * $n;
+          animation-delay: $menu__item-slide-and-show-delay * $n;
         }
       }
       &:hover &-border::after {
@@ -107,7 +108,7 @@ $menu__num-items: 10;
         // transform: translateX(-4.19rem);
         // transition: transform 2s ease-in-out;
         // rotate: 180deg;
-        animation: rota-in 1s ease-in-out forwards;
+        animation: rota-in 1s $menu__item-ordercheck-timing forwards;
         // animation: rota-in 2s ease-in-out forwards, vis infinite;
       }
       &-border {
@@ -120,7 +121,8 @@ $menu__num-items: 10;
         top: 0;
         left: 0;
         overflow: hidden;
-        animation: slide-and-show $menu__item-dur ease-out backwards;
+        animation: slide-and-show $menu__item-slide-and-show-duration
+          $menu__item-slide-and-show-timing backwards;
         background-color: white;
         &::after {
           content: "";
@@ -132,7 +134,7 @@ $menu__num-items: 10;
           top: 0;
           border-radius: 0em 0.75em 0.75em 0em;
           transform-origin: right;
-          transition: transform 1s ease-in-out;
+          transition: transform 1s $menu__item-ordercheck-timing;
         }
         // &:hover::after {
         //   transform: translateX(-67px);
@@ -145,7 +147,7 @@ $menu__num-items: 10;
         display: grid;
         grid-template-columns: auto 50px;
         width: 100%;
-        transition: width 1s ease-in-out;
+        transition: width 1s $menu__item-ordercheck-timing;
         z-index: 1;
       }
       // li:not(:first-child) {
@@ -197,7 +199,7 @@ $menu__num-items: 10;
 
     // @for $n from 1 through $menu__num-items {
     //   &-item--#{$n} {
-    //     animation-delay: $menu__item-delay * $n;
+    //     animation-delay: $menu__item-slide-and-show-delay * $n;
     //   }
     // }
 
@@ -209,7 +211,7 @@ $menu__num-items: 10;
       color: $color-txt-alt;
       font-size: 1.5rem;
       color: $color-txt-alt;
-      animation: out 1s ease-in-out;
+      animation: out 1s $menu__item-ordercheck-timing;
       // rotate: 180deg;
       // transform: rotate(-180deg);
       // transition: transform 2s ease-in-out;

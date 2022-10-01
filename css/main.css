@@ -46,7 +46,7 @@ ul {
 header {
   display: grid;
   justify-items: center;
-  padding: 1.5rem 0 1rem 0;
+  padding: 1.25rem 0 0.81rem 0;
 }
 header > img {
   width: 43%;
@@ -68,6 +68,7 @@ header > img {
   text-align: center;
 }
 .intro__location {
+  padding: 0.81em;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 30px auto 1fr;
@@ -80,6 +81,13 @@ header > img {
 }
 .intro__location > p {
   font-weight: 500;
+}
+.intro__search-field {
+  border-style: none;
+  outline: none;
+  background-color: transparent;
+  font-weight: 500;
+  width: 115px;
 }
 .intro__button {
   position: relative;
@@ -113,6 +121,18 @@ header > img {
 }
 .intro__button:hover::before {
   opacity: 1;
+}
+
+::-moz-placeholder {
+  color: #353535;
+}
+
+:-ms-input-placeholder {
+  color: #353535;
+}
+
+::placeholder {
+  color: #353535;
 }
 
 .guide__list-wrapper {

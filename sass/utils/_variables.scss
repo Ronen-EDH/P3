@@ -11,9 +11,9 @@ $color-guide-item-bg--active: lighten($color-primary, 35%);
 $color-card-new-txt: darken($color-tertiary, 45%);
 $color-footer-bg: #353535;
 
-$menu__item-delay: 150ms;
-$menu__item-dur: 1000ms;
+$menu__item-slide-and-show-delay: 150ms;
+$menu__item-slide-and-show-duration: 1000ms;
+$menu__item-slide-and-show-timing: ease-out;
 $menu__num-items: 9;
-// $menu__num-lists: 3;
-// $menu__total-delay: 0ms;
-// $menu__loop-counter: 0;
+$menu__item-ordercheck-duration: 1000ms;
+$menu__item-ordercheck-timing: ease-in-out;
