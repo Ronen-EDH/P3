@@ -187,6 +187,7 @@ header > img {
 main {
   background-color: #f6f6f6;
   padding-top: 2em;
+  padding-bottom: 3em;
 }
 
 .main__cards-wrapper {
@@ -199,10 +200,10 @@ main {
 .main__card {
   display: grid;
   grid-template-columns: auto 50px;
-  grid-template-rows: 27vh 6vh 5.5vh;
+  grid-template-rows: 2.5fr 0.55fr 0.5fr;
   border-radius: 20px;
   margin-bottom: 5%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
   position: relative;
 }
 .main__card img {
@@ -214,7 +215,7 @@ main {
   -o-object-position: bottom;
      object-position: bottom;
   border-radius: 20px 20px 0 0;
-  height: 100%;
+  height: 175px;
 }
 .main__card p,
 .main__card h3 {
@@ -267,11 +268,16 @@ footer {
   background-color: #353535;
 }
 
+.footer__wrapper {
+  padding-left: 5%;
+  padding-right: 5%;
+}
 .footer__list {
   display: grid;
   row-gap: 0.63em;
   color: white;
   padding: 1.5em 0em 2em 0.5em;
+  margin: 0;
 }
 .footer__list a {
   color: white;
@@ -296,11 +302,9 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 5%;
   }
-  .main__card h3 {
-    font-size: clamp(90%, 1.5vw, 120%);
-  }
-  .main__card p {
-    font-size: clamp(90%, 1.5vw, 120%);
+  .main__card h3,
+.main__card p {
+    font-size: clamp(90%, 1.5vw, 150%);
   }
   .main__card-icon, .main__card-icon--full {
     justify-self: center;
@@ -319,9 +323,8 @@ footer {
   }
 }
 @media (min-width: 992px) {
-  .main__card {
-    height: 50vh;
-    grid-template-rows: 38vh 6vh 5.5vh;
+  .main__card img {
+    height: 18vw;
   }
 }
 @-webkit-keyframes loader {

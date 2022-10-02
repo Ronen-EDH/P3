@@ -3,11 +3,16 @@ footer {
 }
 
 .footer {
+  &__wrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
   &__list {
     display: grid;
     row-gap: 0.63em;
     color: $color-txt-alt;
     padding: 1.5em 0em 2em 0.5em;
+    margin: 0;
     a {
       color: $color-txt-alt;
       font-size: 0.88rem;

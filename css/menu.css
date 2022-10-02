@@ -50,6 +50,7 @@ header > img {
   border-radius: 40px;
   margin-top: -3rem;
   background-color: #f6f6f6;
+  padding-bottom: 3rem;
 }
 .main img {
   width: 100%;
@@ -148,11 +149,8 @@ header > img {
 }
 .main__menu-item-border {
   border-radius: 0.75em;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.16);
-  /* border: aqua solid 2px; */
-  height: -webkit-fill-available;
-  height: -moz-available;
-  height: fill-available;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
@@ -165,9 +163,7 @@ header > img {
 .main__menu-item-border::after {
   content: "";
   width: 4.19em;
-  height: -webkit-fill-available;
-  height: -moz-available;
-  height: fill-available;
+  height: 100%;
   background-color: #99e2d0;
   position: absolute;
   right: -4.19em;
@@ -321,11 +317,16 @@ footer {
   background-color: #353535;
 }
 
+.footer__wrapper {
+  padding-left: 5%;
+  padding-right: 5%;
+}
 .footer__list {
   display: grid;
   row-gap: 0.63em;
   color: white;
   padding: 1.5em 0em 2em 0.5em;
+  margin: 0;
 }
 .footer__list a {
   color: white;

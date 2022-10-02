@@ -29,6 +29,7 @@ $menu__num-items: 10;
     border-radius: 40px;
     margin-top: -3rem;
     background-color: $color-background-mild;
+    padding-bottom: 3rem;
   }
   img {
     width: 100%;
@@ -113,9 +114,9 @@ $menu__num-items: 10;
       }
       &-border {
         border-radius: 0.75em;
-        box-shadow: 0 4px 15px rgb(0 0 0 / 16%);
+        box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
         /* border: aqua solid 2px; */
-        height: fill-available;
+        height: inherit;
         width: 100%;
         position: absolute;
         top: 0;
@@ -127,7 +128,7 @@ $menu__num-items: 10;
         &::after {
           content: "";
           width: 4.19em;
-          height: fill-available;
+          height: inherit;
           background-color: $color-tertiary;
           position: absolute;
           right: -4.19em;
