@@ -151,14 +151,13 @@ header > img {
   width: calc(100% - 4.19em);
 }
 .main__menu-item:hover .main__menu-animation-checkmark {
-  -webkit-animation: rota-in 1s ease-in-out forwards;
-          animation: rota-in 1s ease-in-out forwards;
+  -webkit-animation: check-rotation 750ms 250ms cubic-bezier(0.6, 0, 0.51, 0.62) forwards, check-in 1000ms ease-in-out forwards;
+          animation: check-rotation 750ms 250ms cubic-bezier(0.6, 0, 0.51, 0.62) forwards, check-in 1000ms ease-in-out forwards;
 }
 .main__menu-item-border {
   border-radius: 0.75em;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  /* border: aqua solid 2px; */
-  height: inherit;
+  height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
@@ -171,7 +170,7 @@ header > img {
 .main__menu-item-border::after {
   content: "";
   width: 4.19em;
-  height: inherit;
+  height: 100%;
   background-color: #99e2d0;
   position: absolute;
   right: -4.19em;
@@ -215,8 +214,8 @@ header > img {
   color: white;
   font-size: 1.5rem;
   color: white;
-  -webkit-animation: out 1s ease-in-out;
-          animation: out 1s ease-in-out;
+  -webkit-animation: check-out 1s ease-in-out;
+          animation: check-out 1s ease-in-out;
 }
 .main__menu ul {
   margin-bottom: 2rem;
@@ -274,52 +273,40 @@ header > img {
     transform: translateY(10px);
   }
 }
-@-webkit-keyframes rota-in {
+@-webkit-keyframes check-rotation {
   0% {
-    transform: rotate(-180deg);
-  }
-  100% {
-    transform: translateX(-4.19rem) rotate(0deg);
+    rotate: -270deg;
   }
 }
-@keyframes rota-in {
+@keyframes check-rotation {
   0% {
-    transform: rotate(-180deg);
-  }
-  100% {
-    transform: translateX(-4.19rem) rotate(0deg);
+    rotate: -270deg;
   }
 }
-@-webkit-keyframes out {
-  0% {
-    transform: translateX(-4.19rem);
-  }
+@-webkit-keyframes check-in {
   100% {
-    transform: translateX(0);
+    translate: -4.19rem;
   }
 }
-@keyframes out {
-  0% {
-    transform: translateX(-4.19rem);
-  }
+@keyframes check-in {
   100% {
-    transform: translateX(0);
+    translate: -4.19rem;
   }
 }
-@-webkit-keyframes vis {
+@-webkit-keyframes check-out {
   0% {
-    visibility: visible;
+    translate: -4.19rem;
   }
   100% {
-    visibility: visible;
+    translate: 0;
   }
 }
-@keyframes vis {
+@keyframes check-out {
   0% {
-    visibility: visible;
+    translate: -4.19rem;
   }
   100% {
-    visibility: visible;
+    translate: 0;
   }
 }
 footer {
