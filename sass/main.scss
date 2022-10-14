@@ -1,15 +1,11 @@
-@import "./utils/variables";
-
-@import "./utils/mixins";
-
-@import "./base/typography";
+@use "./index" as *;
 
 .loading {
   &-blank {
-    animation: blank 3s backwards;
+    animation: blank 2s backwards;
   }
   &-animation {
-    animation: loader 1s linear backwards 3;
+    animation: loader 1s linear backwards 2;
     border: 16px solid $color-background-location;
     border-radius: 50%;
     border-top: 16px solid $color-primary;
@@ -29,8 +25,6 @@
   padding-right: 5%;
   margin-top: 3rem;
 }
-
-@import "./layout/header";
 
 .intro {
   display: grid;
@@ -67,7 +61,6 @@
     font-weight: 500;
     width: 115px;
   }
-  @import "./components/buttons";
 }
 
 ::placeholder {
@@ -213,7 +206,6 @@ main {
     }
   }
 }
-@import "./layout/footer";
 
 @media (min-width: 481px) {
   .main {
@@ -224,14 +216,14 @@ main {
     &__card {
       h3,
       p {
-        font-size: clamp(90%, 1.5vw, 150%);
+        font-size: clamp(0.9rem, 1.5vw, 1.1rem);
       }
       &-icon,
       &-icon--full {
         justify-self: center;
       }
       &-new {
-        font-size: clamp(80%, 1.5vw, 120%);
+        font-size: clamp(0.8rem, 1.5vw, 1.2rem);
       }
     }
   }

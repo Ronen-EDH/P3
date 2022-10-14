@@ -1,11 +1,13 @@
-&__button {
+@use "../utils/variables" as *;
+
+button {
   position: relative;
   padding: 0.85rem 1.25rem 0.85rem 1.25rem;
   margin-top: 1rem;
   margin-bottom: 3rem;
   border-radius: 50px;
   background-image: linear-gradient($color-secondary, $color-primary);
-  color: $color-txt-alt;
+  color: $color-txt-alt !important;
   border-style: none;
   box-shadow: 0 3px 5px 2px rgb(0 0 0 / 20%), 0 1px 2px rgb(0 0 0 / 12%);
   transition: 300ms linear;
