@@ -7,7 +7,7 @@ button {
   margin-bottom: 3rem;
   border-radius: 50px;
   background-image: linear-gradient($color-secondary, $color-primary);
-  color: $color-txt-alt !important;
+  color: $color-txt-alt;
   border-style: none;
   box-shadow: 0 3px 5px 2px rgb(0 0 0 / 20%), 0 1px 2px rgb(0 0 0 / 12%);
   transition: 300ms linear;
@@ -34,5 +34,8 @@ button {
     &::before {
       opacity: 1;
     }
+  }
+  a {
+    color: $color-txt-alt !important;
   }
 }

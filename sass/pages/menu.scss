@@ -186,6 +186,7 @@
 @keyframes check-rotation {
   0% {
     rotate: -270deg;
+    // transform: rotate(-270deg);
   }
   // Without spin delay
   // 100% {
@@ -196,15 +197,18 @@
 @keyframes check-in {
   100% {
     translate: -4.19rem;
+    // transform: translate(-4.19rem);
   }
 }
 
 @keyframes check-out {
   0% {
     translate: -4.19rem;
+    // transform: translate(-4.19rem);
   }
   100% {
     translate: 0;
+    // transform: translate(0);
   }
 }
 
