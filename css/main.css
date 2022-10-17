@@ -17,7 +17,7 @@ ul {
   padding-left: 0;
 }
 
-button {
+.button {
   position: relative;
   padding: 0.85rem 1.25rem 0.85rem 1.25rem;
   margin-top: 1rem;
@@ -30,7 +30,7 @@ button {
   transition: 300ms linear;
   z-index: 1;
 }
-button::before {
+.button::before {
   position: absolute;
   content: "";
   top: 0;
@@ -43,14 +43,14 @@ button::before {
   transition: opacity 300ms linear;
   opacity: 0;
 }
-button:hover {
+.button:hover {
   cursor: pointer;
   box-shadow: 0 6px 10px 1px rgba(0, 0, 0, 0.24), 0 2px 4px rgba(0, 0, 0, 0.16);
 }
-button:hover::before {
+.button:hover::before {
   opacity: 1;
 }
-button a {
+.button a {
   color: white !important;
 }
 

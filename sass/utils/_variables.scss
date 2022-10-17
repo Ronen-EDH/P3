@@ -15,9 +15,6 @@ $menu__item-slide-and-show-delay: 150ms;
 $menu__item-slide-and-show-duration: 1000ms;
 $menu__item-slide-and-show-timing: ease-out;
 $menu__num-items: 9;
-$menu__item-ordercheck-duration: 1000ms;
-$menu__item-ordercheck-dely: calc($menu__item-ordercheck-duration / 4);
-$menu__item-ordercheck-difference: (
-  $menu__item-ordercheck-duration - $menu__item-ordercheck-dely
-);
+$menu__item-ordercheck-duration: 750ms;
+$menu__item-ordercheck-differnce: $menu__item-ordercheck-duration - 50ms;
 $menu__item-ordercheck-timing: ease-in-out;

@@ -12,7 +12,6 @@ $menu__num-items: 10;
   &__icon {
     position: absolute;
     left: 7%;
-    // font-size: 1.25rem;
     font-size: clamp(1.25rem, 5vw, 2rem);
     align-self: center;
   }
@@ -37,7 +36,6 @@ $menu__num-items: 10;
       font-size: 1.63rem;
       letter-spacing: 0.04rem;
       margin: 1.5em 0em 1.25em 0em;
-      // background-color: $color-background-mild;
     }
     display: grid;
     grid-template-columns: auto 50px;
@@ -75,7 +73,6 @@ $menu__num-items: 10;
       position: relative;
       animation: slide-and-show $menu__item-slide-and-show-duration
         $menu__item-slide-and-show-timing backwards;
-      // overflow: hidden;
       border-radius: 0.75em;
       @for $n from 1 through $menu__num-items {
         &--#{$n} {
@@ -89,14 +86,7 @@ $menu__num-items: 10;
         width: calc(100% - 4.19em);
       }
       &:hover .main__menu-animation-checkmark {
-        animation: check-rotation $menu__item-ordercheck-difference
-            $menu__item-ordercheck-dely cubic-bezier(0.6, 0, 0.51, 0.62)
-            forwards,
-          check-in $menu__item-ordercheck-duration $menu__item-ordercheck-timing
-            forwards;
-        // Without spin delay
-        // animation: check-rotation $menu__item-ordercheck-duration
-        //   $menu__item-ordercheck-timing forwards;
+        animation: check-in-rotation $menu__item-ordercheck-differnce forwards;
       }
       &-border {
         border-radius: 0.75em;
@@ -120,14 +110,16 @@ $menu__num-items: 10;
           top: 0;
           border-radius: 0em 0.75em 0.75em 0em;
           transform-origin: right;
-          transition: transform 1s $menu__item-ordercheck-timing;
+          transition: transform $menu__item-ordercheck-duration
+            $menu__item-ordercheck-timing;
         }
       }
       &-container {
         display: grid;
         grid-template-columns: auto 50px;
         width: 100%;
-        transition: width 1s $menu__item-ordercheck-timing;
+        transition: width $menu__item-ordercheck-duration
+          $menu__item-ordercheck-timing;
         z-index: 1;
       }
 
@@ -161,14 +153,15 @@ $menu__num-items: 10;
       color: $color-txt-alt;
       font-size: 1.5rem;
       color: $color-txt-alt;
-      animation: check-out 1s $menu__item-ordercheck-timing;
+      animation: check-out $menu__item-ordercheck-duration
+        $menu__item-ordercheck-timing;
     }
 
     ul {
       margin-bottom: 2rem;
     }
   }
-  &__button {
+  .button {
     grid-column: 1/3;
     width: 50%;
     justify-self: center;
@@ -183,27 +176,27 @@ $menu__num-items: 10;
   }
 }
 
-@keyframes check-rotation {
+@keyframes check-in-rotation {
   0% {
-    rotate: -270deg;
+    transform: translate(0) rotate(-270deg);
+    animation-timing-function: ease-in;
   }
-  // Without spin delay
-  // 100% {
-  //   translate: -4.19rem;
-}
 
-@keyframes check-in {
+  50% {
+    transform: translate(-2.095rem) rotate(-135deg);
+    animation-timing-function: ease-out;
+  }
   100% {
-    translate: -4.19rem;
+    transform: translate(-4.19rem);
   }
 }
 
 @keyframes check-out {
   0% {
-    translate: -4.19rem;
+    transform: translate(-4.19rem);
   }
   100% {
-    translate: 0;
+    transform: translate(0);
   }
 }
 
