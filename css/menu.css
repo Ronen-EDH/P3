@@ -125,6 +125,11 @@ footer {
 .main img {
   width: 100%;
 }
+.main .portrait {
+  height: 66.5vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .main__menu {
   display: grid;
   grid-template-columns: auto 50px;
@@ -359,6 +364,9 @@ footer {
   .main img {
     border-radius: 40px;
   }
+  .main .portrait {
+    height: 53.3vw;
+  }
 }
 @media (min-width: 998px) {
   .header__icon {
@@ -371,5 +379,8 @@ footer {
   .main__menu {
     width: 120%;
     justify-self: center;
+  }
+  .main .portrait {
+    height: 46.7vw;
   }
 }/*# sourceMappingURL=menu.css.map */

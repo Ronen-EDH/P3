@@ -26,6 +26,10 @@
   img {
     width: 100%;
   }
+  .portrait {
+    height: 66.5vw;
+    object-fit: cover;
+  }
   &__menu {
     > h2 {
       @include logo-titles;
@@ -210,6 +214,9 @@
     img {
       border-radius: 40px;
     }
+    .portrait {
+      height: 53.3vw;
+    }
   }
 }
 @media (min-width: 998px) {
@@ -226,6 +233,9 @@
     &__menu {
       width: 120%;
       justify-self: center;
+    }
+    .portrait {
+      height: 46.7vw;
     }
   }
 }
