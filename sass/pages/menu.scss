@@ -187,6 +187,19 @@
   }
 }
 
+
+@keyframes check-in-rotation-rotate {
+  50% {
+    transform: rotate(-270deg);
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    transform:  rotate(-135deg);
+    animation-timing-function: ease-out;
+  }
+}
+
 @keyframes check-out {
   0% {
     transform: translate(-4.19rem);
